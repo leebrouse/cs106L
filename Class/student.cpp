@@ -1,35 +1,57 @@
 #include <iostream>
 #include "Student.h"
 #include <string>
+//******************
+//* Constructors *
+//******************
 
-Student::Student(std::string name,std::string state,int age){
-    this->name=name;
-    this->state=state;
-    this->age=age;
+/// default constructor
+Student::Student() {
+  // name = "John Appleseed";
+  // state = "CA";
+  // age = 18;
 }
+/*
+ * parameterized constructor
+ * Commented out so that compiler doesn't yell about having two constructors
+ * with the same arguments
+ */
+// Student::Student(std::string name, std::string state, int age) {
+//   this->name = name;
+//   this->state = state;
+//   this->age = age;
+// }
 
-std::string Student::getname(){
-    return this->name;
-}
+/// List initialization constructor
+Student::Student(std::string name, std::string state, int age)
+    : name{name}, state{state}, age{age} {}
 
-void Student::setname(std::string name){
-    this->name=name;
-}
+//******************
+//* Destructor *
+//******************
 
-std::string Student::getstate(){
-    return this->state;
-}
+Student::~Student(){}
 
-void Student::setstate(std::string state){
-    this->state=state;
-}
+//******************
+//* Methods *
+//******************
 
-int Student::getage(){
-    return this->age;
-}
+// getter methods
+std::string Student::getName() { return this->name; }
 
-void Student::setage(int age){
-    this->age=age;
+std::string Student::getState() { return this->state; }
+
+int Student::getAge() { return this->age; }
+
+// setter methods
+void Student::setName(std::string name) { this->name = name; }
+
+void Student::setState(std::string state) { this->state = state; }
+
+void Student::setAge(int age) { 
+  if ( age >= 0) {
+    this->age = age;
+  }
 }
 
 
@@ -37,11 +59,11 @@ void Student::setage(int age){
 int main(int argc, char const *argv[])
 {
     Student student ("Jony","AR",23);
-    std::cout<<student.getname()<<'\n';
-    std::cout<<student.getstate()<<'\n';
-    std::cout<<student.getage()<<'\n';
+    std::cout<<student.getName()<<'\n';
+    std::cout<<student.getState()<<'\n';
+    std::cout<<student.getAge()<<'\n';
 
-    student.setname("Holy");
-    std::cout<<student.getname()<<'\n';
+    student.setName("Holy");
+    std::cout<<student.getName()<<'\n';
     return 0;
 }

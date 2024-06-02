@@ -6,15 +6,19 @@ private:
     int age;
 
 public:
+    Student();
     Student(std::string name,std::string state, int age);
-    std::string getname();
-    void setname(std::string name);
+    /// Destructor
+    ~Student();
+    
+    std::string getName();
+    void setName(std::string name);
 
-    std::string getstate();
-    void setstate(std::string state);
+    std::string getState();
+    void setState(std::string state);
 
-    int getage();
-    void setage(int age);
+    int getAge();
+    void setAge(int age);
 
 };
 
