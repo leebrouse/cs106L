@@ -1,16 +1,12 @@
-#include <iostream>
 #include "Student.h"
-#include <string>
+
 //******************
 //* Constructors *
 //******************
 
 /// default constructor
-Student::Student() {
-  // name = "John Appleseed";
-  // state = "CA";
-  // age = 18;
-}
+Student::Student() 
+    :name{"John Appleseed"},state{"CA"},age{18}{}
 /*
  * parameterized constructor
  * Commented out so that compiler doesn't yell about having two constructors
@@ -30,7 +26,7 @@ Student::Student(std::string name, std::string state, int age)
 //* Destructor *
 //******************
 
-Student::~Student(){}
+Student::~Student(){};
 
 //******************
 //* Methods *
@@ -52,18 +48,4 @@ void Student::setAge(int age) {
   if ( age >= 0) {
     this->age = age;
   }
-}
-
-
-
-int main(int argc, char const *argv[])
-{
-    Student student ("Jony","AR",23);
-    std::cout<<student.getName()<<'\n';
-    std::cout<<student.getState()<<'\n';
-    std::cout<<student.getAge()<<'\n';
-
-    student.setName("Holy");
-    std::cout<<student.getName()<<'\n';
-    return 0;
 }

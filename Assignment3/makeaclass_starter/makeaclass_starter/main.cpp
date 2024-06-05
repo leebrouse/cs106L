@@ -1,4 +1,5 @@
 #include "class.h"
+#include <iostream>
 
 /*
  * Assigment 3: Make a class!
