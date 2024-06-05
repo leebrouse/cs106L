@@ -3,5 +3,9 @@ SunetID:
 
 1. What's const-correctness and why is it important for programmers?
 
+    "Const-correctness" 是指在程序中正确使用 const 关键字来确保数据的不可修改性。
+    这包括将成员函数中不会修改成员变量的函数声明为 const，以及在指针、引用和对象本身上正确使用 const 修饰符。
+    它的重要性在于提高代码的可读性、可维护性和安全性。通过使用 const 关键字，程序员可以更清晰地表达代码的意图，
+    并防止不必要的数据修改和错误。此外，const-correctness 还有助于编译器进行更好的优化，提高程序的性能。
 
 2. Is your class const-correct? How do you know?
