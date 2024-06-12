@@ -34,7 +34,7 @@ int main() {
     };
 
     // TODO: Convert temperatures to Celsius and output to output.txt
-
+    
     // TODO: Find the maximum temperature for each day and output to output.txt
 
     // TODO: Find the minimum temperature for each day and output to output.txt
