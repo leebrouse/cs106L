@@ -5,7 +5,7 @@ class User {
 public:
     // TODO: write special member functions, including default constructor!
 
-
+    User();
     User(std::string name);
 
     // getter functions
@@ -15,9 +15,10 @@ public:
 
     // setter functions
     void setName(std::string name);
-
-    // TODO: add the < operator overload here!
+    void addFriend(const User& friendUser);
     
+    // TODO: add the < operator overload here!
+    bool operator<(const User& other) const;
 private:
     std::string name;
     std::set<User> friends;

@@ -2,7 +2,10 @@
 #include "user.h"
 
 // TODO: Implement the non-member function + operator overload here!
-
+void operator+(User &name, User &othername){
+    name.addFriend(othername);
+    othername.addFriend(name);
+}
 
 void printFriends(const User& user) {
     std::cout << user.getName() << " is friends with: " << std::endl;
@@ -31,8 +34,6 @@ int main() {
     printFriends(bob);
     printFriends(charlie);
     printFriends(dave);
-
-
 
     return 0;
 

@@ -6,7 +6,7 @@
 
 User::User(std::string name) {
 // TODO: Implement the additional constructor here!
-
+    this->name=name;
 }
 
 std::string User::getName() const {
@@ -26,4 +26,11 @@ void User::setName(std::string name) {
     this->name = name;
 }
 
+void User::addFriend(const User& friendUser) {
+    friends.insert(friendUser);
+}
+
 // TODO: Implement the < operator overload here!
+ bool User::operator<(const User& other) const {
+    return name < other.name;
+}
